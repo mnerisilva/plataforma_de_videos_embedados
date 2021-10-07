@@ -30,6 +30,7 @@ midia.forEach(function(_midia){
     });
     elementLI.innerHTML = _midia.title;
     lista_lateral.append(elementUL);
+    lista_lateral = document.querySelector('.left-side ul:last-child');
     lista_lateral.append(elementLI);
     
 });
