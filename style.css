@@ -10,21 +10,21 @@
 
 .left-side ul li {
     width: 90%;
-    padding: 2px 3px;
+    font-size: 1.3em;
+    padding: 2px 20px;
     background-color: #dedede;
     color: #000;
     margin-bottom: 10px;
 }
 
 .left-side ul li:hover {
-    background-color: #000;
-    color: #fff;;
+    background-color: rgb(190, 185, 221) !important;
+    background-color: ;
+    color: #000;;
     cursor: pointer;
 }
 
-.left-side ul li a:hover {
-    /*color: hotpink;*/
-}
+
 .left-side ul li a {
     text-decoration: none;
     /*color: #000;*/
@@ -37,7 +37,14 @@
     background-color: rgb(236, 233, 233);
 }
 
+
+.right-side h4 {
+    font-size: 2em;
+    font-weight: 600;
+}
 .active {
     padding-right: 5px;
     border-right: solid 8px hotpink;
+    background-color: darkslateblue !important;
+    color: #fff !important;
 }
