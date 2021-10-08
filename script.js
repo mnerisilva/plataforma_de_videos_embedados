@@ -17,13 +17,19 @@ midia.forEach(function(_midia){
     let elementLI = document.createElement('li');
     let elementH3 = document.createElement('h3');
     if(_tag != _midia.tag){
+        lista_lateral = document.querySelector('.left-side');
         elementH3.textContent = _midia.tag;
-        lista_lateral.append(elementH3);
+        lista_lateral.append(elementH3);       
+        elementUL.append(elementLI);
+        lista_lateral.append(elementUL);
         _tag = _midia.tag
     } else {
+        lista_lateral = document.querySelector('.left-side ul:last-child');        
+        lista_lateral.append(elementLI);
         console.log('igual')
     }
     elementLI.setAttribute('data-id',_midia.id);
+    elementLI.innerHTML = _midia.title;
     elementLI.addEventListener('click', function(){
         let todas_li = document.querySelectorAll('.left-side li');
         todas_li.forEach(li => li.classList.remove('active'));
@@ -34,10 +40,6 @@ midia.forEach(function(_midia){
         right_side_h4.textContent = _midia.title;
         iframe.setAttribute('src', _src)
     });
-    elementLI.innerHTML = _midia.title;
-    lista_lateral.append(elementUL);
-    lista_lateral = document.querySelector('.left-side ul:last-child');
-    lista_lateral.append(elementLI);
     
 });
 

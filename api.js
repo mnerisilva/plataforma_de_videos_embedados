@@ -1,15 +1,5 @@
     export const midia = [
     {
-        id: 3,
-        type: 'playlist',
-        tag: 'Bootstrap',
-        sub_tag: 'Bootstrap 3',
-        title: 'Curso de Bootstrap 3',
-        channel: 'Curso de Bootstrap',
-        year: '2015',
-        videos_playlist: ["8sU-IVaQYgk","GqbVqlCZYTw","W_qkSL0j49Y","JpYDV2RmwoI","OXyuEB56hPM","cyxPccKY7SM","8EWPuJRFMh4","P4w8g5-3-pE","I3WQ12FMndA","FdoJxOLZEK4","TqajmvVPyE4","aPFPkdv6rok","WWHpFsAf1t4","2p6LJwBNPEs","Y8rVcYZb4vQ","N8aVcjmAtEE"]
-    },
-    {
         id: 1,
         type: 'playlist',
         tag: 'Lógica',

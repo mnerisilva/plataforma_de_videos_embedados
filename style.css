@@ -50,10 +50,14 @@
 
 
 
-.instrucao { 
-    display: none;
+.instrucao {
     width: 88%;
     height: 600px;
     background-color: rgba(255, 140, 0, 0.473);
     z-index: 999999;
 }
+
+.embed-responsive {
+    position: relative;
+}
+
