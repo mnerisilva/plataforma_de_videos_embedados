@@ -6,6 +6,8 @@ const right_side_h4 = document.querySelector('.right-side h4');
 
 let lista_lateral = document.querySelector('.left-side');
 
+let instrucao = document.querySelector('.instrucao');
+
 let _src = '';
 
 let _tag = '';
@@ -39,9 +41,19 @@ midia.forEach(function(_midia){
     
 });
 
-_src = `https://www.youtube.com/embed/${ midia[0].videos_playlist[0] }?playlist=${ midia[0].videos_playlist[0] }&enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=1;showinfo=0;autohide=1;rel=0`;
+_src = `https://www.youtube.com/embed/${ midia[0].videos_playlist[0] }?playlist=${ midia[0].videos_playlist.toString() }&enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=1;showinfo=0;autohide=1;rel=0`;
 
 iframe.setAttribute('src', _src)
 
+let _instrucao = '';
+
+console.log('xx: ' + midia[0].videos_playlist.length);
+if(midia[0].videos_playlist.length > 1){
+    instrucao.style.display = 'block';
+    midia[0].videos_playlist.forEach(function(item){
+        _instrucao = _instrucao + `<li><a href="">${item}</a></li>`
+        instrucao.innerHTML = _instrucao;
+    });   
+}
 console.log(midia);
 

@@ -47,3 +47,13 @@
     background-color: darkslateblue !important;
     color: #fff !important;
 }
+
+
+
+.instrucao { 
+    display: none;
+    width: 88%;
+    height: 600px;
+    background-color: rgba(255, 140, 0, 0.473);
+    z-index: 999999;
+}
