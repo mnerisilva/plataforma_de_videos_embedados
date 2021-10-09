@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*div[class^="col-"] {
+    box-sizing: border-box;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}*/
+
 .left-side {
     border: solid thin rgb(238 236 236 / 93%);
     padding-left: 5px;
@@ -9,17 +24,23 @@
 }
 
 .left-side ul li {
-    width: 90%;
-    font-size: 1.3em;
-    padding: 2px 20px;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 20px;
     background-color: #dedede;
     color: #000;
     margin-bottom: 10px;
 }
 
+
+.left-side h4 {
+    font-weight: 600 !important;
+}
+
 .left-side ul li:hover {
+    transition: background-color .3s;
     background-color: rgb(190, 185, 221) !important;
-    color: #000;;
+    color: #000;
     cursor: pointer;
 }
 
@@ -31,9 +52,14 @@
 
 .right-side {
     border: solid thin rgb(238 236 236 / 93%);
-    height: 90vh;
+    height: 80vh;
     padding: 5px 10px;
     background-color: rgb(236, 233, 233);
+}
+
+
+.right-side iframe {
+    height: 80vh;
 }
 
 
@@ -42,6 +68,7 @@
     font-weight: 600;
 }
 .active {
+    transition: background-color .3s;
     padding-right: 5px;
     border-right: solid 8px hotpink;
     background-color: darkslateblue !important;

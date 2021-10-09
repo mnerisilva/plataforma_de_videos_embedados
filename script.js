@@ -17,11 +17,11 @@ let todas_li = '';
 midia.forEach(function(_midia){
     let elementUL = document.createElement('ul');      
     let elementLI = document.createElement('li');
-    let elementH3 = document.createElement('h3');
+    let elementH4 = document.createElement('h4');
     if(_tag != _midia.tag){
         lista_lateral = document.querySelector('.left-side');
-        elementH3.textContent = _midia.tag;
-        lista_lateral.append(elementH3);       
+        elementH4.textContent = _midia.tag;
+        lista_lateral.append(elementH4);       
         elementUL.append(elementLI);
         lista_lateral.append(elementUL);
         _tag = _midia.tag
