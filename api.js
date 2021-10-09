@@ -1,10 +1,10 @@
     export const midia = [
     {
         id: 1,
-        type: 'playlist',
+        type: 'video',
         tag: 'Lógica',
         sub_tag: 'lógica da programação',
-        title: 'Curso Lógica de Programação Completo 2021 - [iniciante]',
+        title: 'Curso lógica de programação completo 2021',
         channel: 'Dev Aprender',
         year: '2021',
         videos_playlist: ["iF2MdbrTiBM"]
@@ -14,7 +14,7 @@
         type: 'playlist',
         tag: 'Lógica',
         sub_tag: 'lógica da programação',
-        title: 'Lógica de programação',
+        title: 'Curso de lógica de programação',
         channel: 'RBtech',
         year: '2015',
         videos_playlist: ["Ds1n6aHchRU","JLlTo3SwxJE","7ph98Ih_ckc","vp4jgXA_BB0","g0iIVeeQo1M","dJMu1qjUAKY","oNoBSTsao4k"]

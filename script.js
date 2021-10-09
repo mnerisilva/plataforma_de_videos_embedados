@@ -20,7 +20,8 @@ midia.forEach(function(_midia){
     let elementH4 = document.createElement('h4');
     if(_tag != _midia.tag){
         lista_lateral = document.querySelector('.left-side');
-        elementH4.textContent = _midia.tag;
+        //elementH4.textContent = _midia.tag;
+        elementH4.textContent = `${_midia.tag}`;
         lista_lateral.append(elementH4);       
         elementUL.append(elementLI);
         lista_lateral.append(elementUL);
@@ -33,25 +34,42 @@ midia.forEach(function(_midia){
     elementLI.setAttribute('data-id',_midia.id);
     elementLI.innerHTML = _midia.title;
     elementLI.addEventListener('click', function(){
+        const _this = this;
+        //_this.style.borderRightColor = 'hotpink';
         todas_li = document.querySelectorAll('.left-side li');
         todas_li.forEach(li => li.classList.remove('active'));
-        const _this = this;
+        todas_li.forEach(li => li.style.borderRightColor = '#fff');
+        //todas_li.forEach(li => li.borderRightColor = 'hotpink');
         _this.classList.add('active');
+        _this.style.borderRightColor = 'hotpink';
         console.log(this.dataset.id);
             _src = `https://www.youtube.com/embed/${ _midia.videos_playlist[0] }?playlist=${ _midia.videos_playlist.toString()}&enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=1;showinfo=0;autohide=1;rel=0`;
-        right_side_h4.textContent = _midia.title;
+
+        if(_midia.type === 'playlist'){
+            right_side_h4.textContent = `${_midia.title} - [ ${_midia.type} * 1/${_midia.videos_playlist.length} ]`;
+        } else {
+            right_side_h4.textContent = `${_midia.title} - [ ${_midia.type} * 1/1 ]`;
+        }
         iframe.setAttribute('src', _src)
     });    
 });
 
 todas_li = document.querySelectorAll('.left-side li');
 todas_li[0].classList.add('active');
+todas_li[0].style.borderRightColor = 'hotpink';
+
+
+if(midia[0].type === 'playlist'){
+    right_side_h4.textContent = `${midia[0].title} - [ ${midia[0].type} * 1/${midia[0].videos_playlist.length} ]`;
+} else {
+    right_side_h4.textContent = `${midia[0].title} - [ ${midia[0].type} * 1/1 ]`;
+}
 
 _src = `https://www.youtube.com/embed/${ midia[0].videos_playlist[0] }?playlist=${ midia[0].videos_playlist.toString() }&enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=1;showinfo=0;autohide=1;rel=0`;
 
 iframe.setAttribute('src', _src)
 
-let _instrucao = '';
+/*let _instrucao = '';
 
 console.log('xx: ' + midia[0].videos_playlist.length);
 if(midia[0].videos_playlist.length > 1){
@@ -61,5 +79,5 @@ if(midia[0].videos_playlist.length > 1){
         instrucao.innerHTML = _instrucao;
     });   
 }
-console.log(midia);
+console.log(midia);*/
 
