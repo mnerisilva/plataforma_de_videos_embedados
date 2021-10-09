@@ -8,8 +8,13 @@
 }
 
 body {
-    height: 100vh;
+    height: calc(72vh - 120px);
     background-color: darkgray;
+}
+
+.container-fluid {
+    max-width: 95vw;
+    max-height: calc(72vh - 120px);
 }
 
 .left-side {
@@ -48,6 +53,8 @@ body {
 
 .left-side h4 {
     font-weight: 600 !important;
+    font-size: 1.5em;
+    color: #fff;
 }
 
 .left-side ul li:hover {
